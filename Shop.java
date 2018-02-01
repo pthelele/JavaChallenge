@@ -64,25 +64,33 @@ public class Shop{
 			//Displaying the Cart.
 			System.out.println("");
 		System.out.println("");
+		 
 		System.out.println("Items\tDescription\tPrice\tQuanities\tTotal");
 			for(int i = 0; i < 4; i++)
 			{
 				System.out.println(items[i]+"\t"+description[i]+"\t\t"+price[i]+"\t\t"+quantities[i]+"\t"+total[i]);
+	
 			}
 			 itemSelected = JOptionPane.showInputDialog("Please select item to purchase\n1: Coke\n2: Kit Kat\n3: Bar One\n4: Fanta\nTo Exit: press \"99\"");
+			
 		}
 		
-		System.out.println("");
+		
 		System.out.println("");
 		System.out.println("Items\tDescription\tPrice\tQuanities\tTotal");
 		
 		
-			
+		double grandTotal = 0;	
 		
 		for(int i = 0; i < 4; i++)
 		{
 			System.out.println(items[i]+"\t"+description[i]+"\t\t"+price[i]+"\t\t"+quantities[i]+"\t"+total[i]);
+			grandTotal += total[i]; 
+			
 		}
+		
+		System.out.println("");
+		System.out.println("Grand Total : R"+grandTotal);
 		
 	}
 	
